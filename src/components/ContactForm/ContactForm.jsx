@@ -11,14 +11,18 @@ export const ContactForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
 
+    const name = useState();
+    const number = useState();
+
+
     const isContactExist = contacts.find(
-      contact => contact.Name.toLowerCase() === Name.toLowerCase()
+      contact => contact.name.toLowerCase() === name.toLowerCase()
     );
 
     if (isContactExist) {
       Notiflix.Report.warning(
         'Alert',
-        `Contact with name ${Name} already exists!`,
+        `Contact with name ${name} already exists!`,
         'Ok'
       );
     return;
