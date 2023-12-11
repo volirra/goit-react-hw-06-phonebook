@@ -10,6 +10,31 @@ export const ContactForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
 
+    // const isInContacts = contacts.some(
+    //   contact =>
+    //     contact.name.toLowerCase().trim() === name.toLowerCase().trim()
+    // );
+
+    //  if (isInContacts) {
+    //   alert(`${name} is already in contacts`);
+    //   return;
+    // }
+
+
+    //const isContactExist = contacts.find(
+    //  contact => contact.name.toLowerCase() === name.toLowerCase()
+    //);
+
+    //if (isContactExist) {
+    //  Notiflix.Report.warning(
+    //    'Alert',
+    //    `Contact with name ${name} already exists!`,
+    //    'Ok'
+    //  );
+    //  return;
+    //}
+
+
         const newObj = {
             id: nanoid(),
             name: e.target.elements.name.value,
