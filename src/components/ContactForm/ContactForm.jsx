@@ -3,23 +3,13 @@ import React from 'react';
 import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactSlice';
+//import Notiflix from 'notiflix';
 
 export const ContactForm = () => {
     const dispatch = useDispatch();
 
     const handleSubmit = e => {
         e.preventDefault();
-
-    // const isInContacts = contacts.some(
-    //   contact =>
-    //     contact.name.toLowerCase().trim() === name.toLowerCase().trim()
-    // );
-
-    //  if (isInContacts) {
-    //   alert(`${name} is already in contacts`);
-    //   return;
-    // }
-
 
     //const isContactExist = contacts.find(
     //  contact => contact.name.toLowerCase() === name.toLowerCase()
@@ -31,10 +21,22 @@ export const ContactForm = () => {
     //    `Contact with name ${name} already exists!`,
     //    'Ok'
     //  );
-    //  return;
+    //return;
     //}
 
+    // const isNumberExist = contacts.find(
+    //   contact =>
+    //     contact.number.replace(/\D/g, '') === number.replace(/\D/g, '')
+    // );
 
+    // if (isNumberExist) {
+    //   Notiflix.Report.warning(
+    //     'Alert',
+    //     `Number ${number} is already in contacts!`,
+    //     'Ok'
+    //   );
+    //   return;
+    // }
         const newObj = {
             id: nanoid(),
             name: e.target.elements.name.value,
